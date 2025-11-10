@@ -1,0 +1,75 @@
+:root {
+    --color-fons: #1a1a1a;
+    --color-text: #e0e0e0;
+    --color-targeta: #2a2a2a;
+    --color-accent: #00bfff;
+    --color-ombra: #000000;
+    --color-boto: #333;
+    --color-boto-hover: #444;
+    --color-boto-login: var(--color-accent);
+    --color-boto-login-hover: #00a0d9;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--color-fons);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--color-targeta);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 { color: var(--color-accent); font-size: 1.8rem; letter-spacing: 2px; }
+header nav a { color: var(--color-text); text-decoration: none; margin: 0 1rem; font-weight: bold; transition: color 0.3s ease; padding-bottom: 5px; border-bottom: 2px solid transparent; }
+header nav a:hover { color: var(--color-accent); }
+header nav a.active { color: var(--color-accent); border-bottom: 2px solid var(--color-accent); }
+
+.login-button { background-color: var(--color-boto-login); color: var(--color-fons); padding: 0.6rem 1.2rem; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background-color 0.3s ease, transform 0.2s ease; }
+.login-button:hover { background-color: var(--color-boto-login-hover); transform: translateY(-2px); }
+
+main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+
+.card { background-color: var(--color-targeta); padding: 1.5rem 2rem; margin-bottom: 2rem; border-radius: 8px; border: 1px solid #333; box-shadow: 0 4px 10px rgba(var(--color-ombra), 0.5); }
+
+.card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid #444; padding-bottom: 0.5rem; }
+.card-header h2 { color: var(--color-text); margin-bottom: 0; }
+
+/* --- AQUÍ ESTÀ L'ARREGLAMENT MÀGIC --- */
+.add-link-btn {
+    background-color: var(--color-accent);
+    color: var(--color-fons);
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 1.6rem; /* Una mica més gran per compensar */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    
+    /* Les 3 línies màgiques per centrar-ho tot perfecte */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 6px; /* Un petit ajust final per la posició del '+' */
+}
+.add-link-btn:hover { transform: scale(1.1); }
+
+.add-section-container { text-align: center; margin-bottom: 2rem; }
+#add-section-btn { width: 100%; padding: 1rem; background-color: #222; border: 2px dashed #444; }
+#add-section-btn:hover { background-color: #333; border-color: #555; }
+
+.button-container { display: flex; flex-wrap: wrap; gap: 1rem; }
+.button { display: inline-block; background-color: var(--color-boto); color: var(--color-text); padding: 0.8rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background-color 0.3s ease, transform 0.2s ease; cursor: grab; }
+.button:hover { background-color: var(--color-boto-hover); transform: translateY(-2px); }
+
+.button.dragging { opacity: 0.5; cursor: grabbing; }
+
+footer { text-align: center; padding: 2rem; margin-top: 2rem; color: #888; border-top: 1px solid var(--color-targeta); }
