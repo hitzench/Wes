@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hub d'Estudis - Marc</title>
+    <title>FRAME GAMES — Hub d'Estudis</title>
+    <meta name="description" content="Hub d'estudis personal de Marc: enllaços i recursos organitzats per seccions.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,54 +12,56 @@
 </head>
 <body>
 
+    <a class="skip-link" href="#main-content">Saltar al contingut</a>
+
     <header>
         <h1>FRAME GAMES</h1>
-        <nav>
-            <a href="index.html" class="active">Pàgina principal</a>
-            <a href="class.html">Class</a>
-            <a href="videos.html">Videos</a>
+        <nav aria-label="Navegació principal">
+            <a href="index.html" class="active" aria-current="page">Pàgina principal</a>
+            <a href="class.html">Classe</a>
+            <a href="videos.html">Vídeos</a>
         </nav>
-        <a href="https://accounts.google.com/" class="login-button" target="_blank">Login</a>
+        <a href="https://accounts.google.com/" class="login-button" target="_blank" rel="noopener noreferrer" aria-label="Inicia sessió a Google">Login</a>
     </header>
 
     <main id="main-content">
         <!-- El botó principal per afegir noves seccions -->
         <div class="add-section-container">
-            <button id="add-section-btn" class="button">Afegir nova secció</button>
+            <button id="add-section-btn" class="button" type="button">Afegir nova secció</button>
         </div>
 
         <!-- Les seccions que ja teníem -->
-        <section class="card">
+        <section class="card" aria-labelledby="h2-general" id="section-general">
             <div class="card-header">
-                <h2>General</h2>
-                <button class="add-link-btn" title="Afegir nou enllaç">+</button>
+                <h2 id="h2-general">General</h2>
+                <button class="add-link-btn" type="button" title="Afegir nou enllaç" aria-label="Afegir nou enllaç a la secció General">+</button>
             </div>
             <div class="button-container">
-                <a href="http://drive.google.com/drive/my-drive" class="button" target="_blank" draggable="true">Drive</a>
-                <a href="https://discord.com/channels/1156594474873540608/1425444006564991058" class="button" target="_blank" draggable="true">Discord</a>
-                <a href="https://mail.google.com/mail/u/0/#inbox" class="button" target="_blank" draggable="true">Mail</a>
-                <a href="https://www.youtube.com/" class="button" target="_blank" draggable="true">YuTus</a>
+                <a href="http://drive.google.com/drive/my-drive" class="button" target="_blank" rel="noopener noreferrer">Drive</a>
+                <a href="https://discord.com/channels/1156594474873540608/1425444006564991058" class="button" target="_blank" rel="noopener noreferrer">Discord</a>
+                <a href="https://mail.google.com/mail/u/0/#inbox" class="button" target="_blank" rel="noopener noreferrer">Mail</a>
+                <a href="https://www.youtube.com/" class="button" target="_blank" rel="noopener noreferrer">YouTube</a>
             </div>
         </section>
 
-        <section class="card">
+        <section class="card" aria-labelledby="h2-anat" id="section-anat">
             <div class="card-header">
-                <h2>Anat</h2>
-                <button class="add-link-btn" title="Afegir nou enllaç">+</button>
+                <h2 id="h2-anat">Anat</h2>
+                <button class="add-link-btn" type="button" title="Afegir nou enllaç" aria-label="Afegir nou enllaç a la secció Anat">+</button>
             </div>
             <div class="button-container">
-                <a href="https://www.sketchdaily.net/en" class="button" target="_blank" draggable="true">SketchDaily (Anat)</a>
+                <a href="https://www.sketchdaily.net/en" class="button" target="_blank" rel="noopener noreferrer">SketchDaily (Anat)</a>
             </div>
         </section>
 
-        <section class="card">
+        <section class="card" aria-labelledby="h2-anim" id="section-anim">
             <div class="card-header">
-                <h2>Anim</h2>
-                <button class="add-link-btn" title="Afegir nou enllaç">+</button>
+                <h2 id="h2-anim">Anim</h2>
+                <button class="add-link-btn" type="button" title="Afegir nou enllaç" aria-label="Afegir nou enllaç a la secció Anim">+</button>
             </div>
             <div class="button-container">
-                <a href="https://characterdesignreferences.com/art-of-animation" class="button" target="_blank" draggable="true">Character design references (Anim)</a>
-                <a href="https://watch.animationshowcase.com/" class="button" target="_blank" draggable="true">Animation Showcase</a>
+                <a href="https://characterdesignreferences.com/art-of-animation" class="button" target="_blank" rel="noopener noreferrer">Character Design References (Anim)</a>
+                <a href="https://watch.animationshowcase.com/" class="button" target="_blank" rel="noopener noreferrer">Animation Showcase</a>
             </div>
         </section>
     </main>
@@ -72,4 +75,3 @@
 </body>
 
 </html>
-
